@@ -1,6 +1,6 @@
-package day02.Polymorphism;
+package day02.Polymorphism.Test;
 
-public class Administrator extends Person{
+public class Administrator extends Person {
     @Override
     public void show() {
         System.out.println("管理员的信息为：" + getName() + ", " + getAge());

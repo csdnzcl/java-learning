@@ -37,7 +37,7 @@ public class Test01 {
         return true;
     }
 
-
+//  查表法：创建一个数组，将数字对应的罗马数字放在数组中，通过索引获取对应的值
     public static String changeLuoMa(int number) {
         String[] arr = {"", "I","II","III","IV","V","VI","VII","VIII","IX"};
         return arr[number];

@@ -1,12 +1,17 @@
-package day03;
+package zcl0903.fangfayinyong.Test;
 
-public abstract class Animal {
+public class Student {
     private String name;
     private int age;
 
-    public Animal() {}
+    public Student(String name, int age) {
+        this.age = age;
+        this.name = name;
+    }
 
-    public Animal(String name,int age) {
+    public Student(String str) {
+        String name = str.split("-")[0];
+        int age = Integer.parseInt(str.split("-")[1]);
         this.age = age;
         this.name = name;
     }
@@ -26,6 +31,4 @@ public abstract class Animal {
     public void setAge(int age) {
         this.age = age;
     }
-
-    public abstract void eat();
 }

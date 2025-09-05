@@ -26,11 +26,8 @@ public class TreeSetDemo {
             System.out.println(i);
         }
         //3. lambda表达式
-        ts.forEach(new Consumer<Integer>() {
-            @Override
-            public void accept(Integer i) {
-                System.out.println(i);
-            }
+        ts.forEach((i) -> {
+            System.out.println(i);
         });
 
         //默认排序
@@ -69,12 +66,12 @@ public class TreeSetDemo {
 }
 
 /*  TreeSet:
-不重复，无索引，可排序（默认升序）---对于字符、字符串（首字母）：按照字符在ASCII码表中的数字升序排列
+不重复，无索引，  可排序（默认升序）---对于字符、字符串（首字母）：按照字符在ASCII码表中的数字升序排列
 基于红黑树实现排序，增删改查性能都较好
 
 TreeSet的两种比较方式：
 方式一：默认排序/自然排序：
-javabean类实现Comparable接口，重写compareTo方法（指定规则）
+javabean类  实现 Comparable接口，重写compareTo方法（指定规则）
 方式二：比较器排序：
 创建TreeSet对象时，传递比较器Comparator指定规则
  */

@@ -1,4 +1,4 @@
-package day03;
+package day03.TestDemo;
 
 public class Frog extends Animal implements Swim{
     public Frog() {

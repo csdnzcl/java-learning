@@ -1,12 +1,11 @@
 package day01;
 
-import java.lang.String;
 import java.util.Scanner;
 
 public class StringDemo {
     public static void main(String[] args) {
         /*java.lang.String类代表字符串，java程序中的所有字符串文字（例如"avc")都为此类的对象
-        字符串内容是不会发生改变的，它的对象在创建后不能被更改
+        字符串内容是不会发生改变的，它的对象在    创建后  不  能被  更改
         */
         //name 只是变量
         String name = "hello";//hello本身就是对象的内容，也是对象本身
@@ -21,12 +20,12 @@ public class StringDemo {
         String ss = "abc";//ss不会创建新的对象，而是复用串池已经存在的abc（对比new)
         System.out.println(s1);  //abc
         ss = "haha";
-        System.out.println(ss);//创建haha对象，并且使得ss引用haha对象
+        System.out.println(ss);//创建haha对象，并使ss ---> haha对象
 
         //2.使用new的方式来获取一个字符串对象
         //空参构造：可以获取一个空白的字符串对象
         String s2 = new String();
-        System.out.println("@" + s2 + "|");  //@|
+        System.out.println("@" + s2 + "|");  //  @|
 
         //3. 传递一个字符串，根据传递的字符串内容再创建一个新的字符串对象
         String s3 = new String("abc");
@@ -47,15 +46,15 @@ public class StringDemo {
         // == 的原理
         //1.基本数据类型，比较数据值
         //2.引用数据类型，比较地址值
-        //字符串中字符的比较：
-        //1.boolean equals方法（要比较的字符串）;  完全一样为true
-        //2.boolean equalsIgnoreCase(要比较的字符串）;  忽略大小写的比较
+//字符串中字符的比较：
+        //1.boolean equals方法  完全一样为true----str1.equals(str2)
+        //2.boolean equalsIgnoreCase  忽略大小写的比较---str1.equalsIgnoreCase(str2)
         //键盘录入的字符串是new出来的
 
-        //遍历字符串：
+//遍历字符串：
         //public char charAt(int index); //根据索引返回字符
         //public int length();  //返回此字符串的长度
-        //vs 数组：数组名.length;     字符串对象.length ();
+        //vs数组 ：  数组名.length;     字符串对象.length ();
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入一个字符串");
         String str = sc.next();
@@ -67,3 +66,11 @@ public class StringDemo {
 
     }
 }
+
+/*
+| 方法签名                                             | 作用                                |
+| ------------------------------------------------ | --------------------------------- |
+| `String substring(int beginIndex)`               | 从 `beginIndex` 到末尾                |
+| `String substring(int beginIndex, int endIndex)` | 从 [beginIndex,endIndex) |
+
+ */

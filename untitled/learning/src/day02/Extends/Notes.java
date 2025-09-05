@@ -11,7 +11,7 @@ public class Notes {
     关键字extends  eg: public class Student extends Person{}
     格式：public class 子类 extends 父类{}
 
-    java只支持单继承，不支持多继承，支持多层继承（直接|间接父类）
+    java只支持单继承（可有多个接口），不支持多继承，支持多层继承（直接|间接父类）
     即一个子类只能有一个父类
     每一个类都直接或者间接继承于Object
 

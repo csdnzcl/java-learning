@@ -1,4 +1,4 @@
-package day02.Polymorphism;
+package day02.Polymorphism.Test;
 
 public class Person {
     private String name;

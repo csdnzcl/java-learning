@@ -3,7 +3,7 @@ package day01;
 import java.util.StringJoiner;
 public class StringJoinerDemo {
     //可变的操作字符串的容器，可以高效方便拼接字符串
-    //拼接可以指定间隔、开始、结束符号
+    //拼接可以指定  间隔、开始、结束符号
     public static void main(String[] args) {
         //1.StringJoiner("间隔符号");
         StringJoiner sj = new StringJoiner("---");
@@ -21,3 +21,10 @@ public class StringJoinerDemo {
         System.out.println(sj2.toString().length());
     }
 }
+/*
+方法：
+    1. add(String);  //StringBuilder--append方法
+    2. toString();
+    3. length();
+
+ */

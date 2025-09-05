@@ -17,13 +17,13 @@ public class MapDemo {
         System.out.println(map);
 
         //2. 遍历--键找值
-        //2.1获取所有键，存储到一个Set集合中
+        //2.1 获取所有键，存储到一个Set集合中
         Set<String> keys = map.keySet();
         //2.2 遍历单列集合
         for(String key : keys) {
             System.out.println(key + "=" + map.get(key));
         }
-        //使用迭代器
+        //2.3 使用迭代器
         Iterator<String> it = keys.iterator();
         while(it.hasNext()) {
             String key = it.next();
@@ -44,19 +44,19 @@ public class MapDemo {
             System.out.println(entry.getKey() + "=" + entry.getValue());
         }
         //lambda
-        entries.forEach(entry -> System.out.println(entry.getKey() + "=" + entry.getValue()));
+        entries.forEach(( Map.Entry<String, String> entry) -> {
+            System.out.println(entry.getKey() + "=" + entry.getValue());
+        });
 
         //3. lambda直接遍历
-        map.forEach(new java.util.function.BiConsumer <String, String>() {
-            @Override
-            public void accept(String key, String value) {
+        map.forEach((String key, String value) -> {
                 System.out.println(key + "=" + value);
             }
-        });
+        );
     }
 }
 /*
-双列集合(Map)：一次添加一对元素，键值对（Entry对象）（键唯一，值不唯一，键值一一对应）
+双列集合(Map)：一次添加一对元素，键值对（  Entry对象  ）（键唯一，值不唯一，键值一一对应）
 map ---> HashMap--->LinkedHashMap
  |
  |----->TreeMap

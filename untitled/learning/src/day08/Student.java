@@ -49,6 +49,7 @@ public class Student implements Comparable<Student>{
     public int compareTo(Student o) {
 
         return this.getAge() - o.getAge();//this:要添加对象 o:红黑树已有对象,升序
+        //返回值为正数,this添加到右边
         // this.getAge() - o.getAge() > 0, 右边
         // this.getAge() - o.getAge() < 0, 左边
         //return o.getAge() - this.getAge();//降序
