@@ -19,7 +19,7 @@ public class StringDemo {
         String s1 = "abc";
         String ss = "abc";//ss不会创建新的对象，而是复用串池已经存在的abc（对比new)
         System.out.println(s1);  //abc
-        ss = "haha";
+        ss = "haha.md";
         System.out.println(ss);//创建haha对象，并使ss ---> haha对象
 
         //2.使用new的方式来获取一个字符串对象

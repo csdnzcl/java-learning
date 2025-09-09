@@ -1,9 +1,10 @@
 package zcl0905.IO;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Demo01 {
+public class OutputStreamDemo03 {
     public static void main(String[] args) throws IOException {
         /*
         实现需求：
@@ -25,7 +26,7 @@ public class Demo01 {
                 每次使用完流之后都要释放资源---避免一直占有
         */
         //创建对象
-        FileOutputStream fos = new FileOutputStream("learning\\a.txt");
+        FileOutputStream fos = new FileOutputStream(new File("learning\\a.txt"));
         //写出数据
         fos.write(97);
         fos.write(98);
@@ -63,10 +64,16 @@ IO流：存储和读取数据的解决方案
 2. 操作文件类型：字节流（ALL）、字符流（纯文本文件）
 
 IO流体系：
- |----->字节流     抽象类
-          |---->InputStream
-          |---->OutputStream
+ |----->字节流     抽象类               基本流             高级流————缓冲流
+          |---->InputStream------>FileInputStream----->BufferedInputStream
+                                       |-------------->ObjectInputStream(反序列化流）
+          |---->OutputStream----->FileOutputStream---->BufferedOutputStream
+                                       |-------------->ObjectOutputStream(序列化流）
+                                       |-------------->PrintStream(打印流）
  |----->字符流
-          |---->Reader
-          |---->Writer
+          |---->Reader----------->FileReader---------->BufferedReader
+                                       |-------------->InputStreamReader(转换流）
+          |---->Writer----------->FileWriter---------->BufferedWriter
+                                       |-------------->OutputStreamWriter(转换流）)
+                                       |-------------->PrintWriter(打印流)
 */
